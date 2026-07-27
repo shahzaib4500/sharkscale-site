@@ -1,0 +1,149 @@
+/*
+ * Shared styles for every page on sharkscale.online.
+ *
+ * One stylesheet, no build step: these are legal documents that change a few
+ * times a year, and anything with a compile step would be one more thing to
+ * remember how to run when a policy needs a correction.
+ */
+
+:root {
+  --brand: #dc2419;
+  --ink: #1a1a1a;
+  --ink-soft: #555;
+  --line: #e6e6e6;
+  --page: #ffffff;
+  --panel: #fafafa;
+  --measure: 44rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --ink: #ececec;
+    --ink-soft: #a8a8a8;
+    --line: #2c2c2c;
+    --page: #141414;
+    --panel: #1c1c1c;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0 1.25rem 5rem;
+  background: var(--page);
+  color: var(--ink);
+  font: 16px/1.65 -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    'Helvetica Neue', Arial, sans-serif;
+  -webkit-text-size-adjust: 100%;
+}
+
+.wrap {
+  max-width: var(--measure);
+  margin: 0 auto;
+}
+
+header.site {
+  padding: 2.5rem 0 1.5rem;
+  border-bottom: 1px solid var(--line);
+  margin-bottom: 2.5rem;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: var(--ink);
+  text-decoration: none;
+  letter-spacing: -0.01em;
+}
+
+.brand .mark {
+  width: 1.6rem;
+  height: 1.6rem;
+  border-radius: 0.45rem;
+  background: var(--brand);
+  display: inline-block;
+}
+
+h1 {
+  font-size: 2rem;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  margin: 0 0 0.5rem;
+}
+
+h2 {
+  font-size: 1.15rem;
+  letter-spacing: -0.01em;
+  margin: 2.5rem 0 0.6rem;
+}
+
+p {
+  margin: 0 0 1rem;
+}
+
+.lead {
+  color: var(--ink-soft);
+  font-size: 1.05rem;
+  margin-bottom: 0.5rem;
+}
+
+.updated {
+  color: var(--ink-soft);
+  font-size: 0.85rem;
+  margin: 0 0 2.5rem;
+}
+
+a {
+  color: var(--brand);
+}
+
+/* Card list, used by the landing page to index each app's documents. */
+.apps {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 1rem;
+}
+
+.app {
+  border: 1px solid var(--line);
+  border-radius: 0.9rem;
+  padding: 1.25rem 1.4rem;
+  background: var(--panel);
+}
+
+.app h2 {
+  margin: 0 0 0.15rem;
+  font-size: 1.05rem;
+}
+
+.app p {
+  margin: 0 0 0.9rem;
+  color: var(--ink-soft);
+  font-size: 0.92rem;
+}
+
+.app a {
+  font-size: 0.92rem;
+  margin-right: 1.1rem;
+  font-weight: 600;
+}
+
+footer.site {
+  margin-top: 4rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--line);
+  color: var(--ink-soft);
+  font-size: 0.85rem;
+}
+
+footer.site a {
+  color: var(--ink-soft);
+}
