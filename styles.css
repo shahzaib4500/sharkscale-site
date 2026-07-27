@@ -1,29 +1,23 @@
 /*
- * Shared styles for every page on sharkscale.online.
+ * Shared styles for every page on legal.sharkscale.online.
  *
  * One stylesheet, no build step: these are legal documents that change a few
  * times a year, and anything with a compile step would be one more thing to
  * remember how to run when a policy needs a correction.
+ *
+ * Light only, and deliberately: a legal page is read once, usually because a
+ * store listing sent someone here, and it should look the same for everyone
+ * who arrives. Following the reader's dark-mode preference gained nothing and
+ * made the page a different document depending on who opened it.
  */
 
 :root {
-  --brand: #dc2419;
   --ink: #1a1a1a;
-  --ink-soft: #555;
+  --ink-soft: #5b5b5b;
   --line: #e6e6e6;
   --page: #ffffff;
   --panel: #fafafa;
   --measure: 44rem;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --ink: #ececec;
-    --ink-soft: #a8a8a8;
-    --line: #2c2c2c;
-    --page: #141414;
-    --panel: #1c1c1c;
-  }
 }
 
 * {
@@ -66,7 +60,7 @@ header.site {
   width: 1.6rem;
   height: 1.6rem;
   border-radius: 0.45rem;
-  background: var(--brand);
+  background: var(--ink);
   display: inline-block;
 }
 
@@ -87,6 +81,15 @@ p {
   margin: 0 0 1rem;
 }
 
+ul {
+  margin: 0 0 1rem;
+  padding-left: 1.25rem;
+}
+
+li {
+  margin-bottom: 0.4rem;
+}
+
 .lead {
   color: var(--ink-soft);
   font-size: 1.05rem;
@@ -99,8 +102,16 @@ p {
   margin: 0 0 2.5rem;
 }
 
+/* Links carry the same ink as the text and lean on the underline, so a
+   paragraph of policy reads as prose rather than a row of coloured pills. */
 a {
-  color: var(--brand);
+  color: var(--ink);
+  text-decoration-color: #b9b9b9;
+  text-underline-offset: 0.15em;
+}
+
+a:hover {
+  text-decoration-color: var(--ink);
 }
 
 /* Card list, used by the landing page to index each app's documents. */
