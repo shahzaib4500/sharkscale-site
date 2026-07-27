@@ -9,31 +9,34 @@ stylesheet, so a policy correction is an edit and a push.
 ## Layout
 
 ```
-index.html                              landing page, lists every app
-styles.css                              shared styles
-CNAME                                   custom domain for GitHub Pages
-apps/<app-slug>/privacy/index.html      → /apps/<app-slug>/privacy/
-apps/<app-slug>/terms/index.html        → /apps/<app-slug>/terms/
+index.html                            landing page, lists every app
+styles.css                            shared styles
+CNAME                                 custom domain for GitHub Pages
+privacy/index.html                    → /privacy/  (all apps)
+apps/<app-slug>/terms/index.html      → /apps/<app-slug>/terms/
 ```
 
-Documents are **per app**, not shared. Play's Data Safety declaration is per
-app and the apps genuinely differ — one may send document text to an AI
-provider where another does not — so a single shared policy would have to
-describe the union of everything, which is wrong for each app individually.
+The privacy policy is **company-wide** — it says so itself: "applies to use
+all application on all platforms" — so it lives at one URL that every listing
+points at. Subscription terms name a specific app and its plans, so those are
+per app.
 
 ## Live URLs
 
 | App | Package | Privacy | Terms |
 | --- | --- | --- | --- |
-| AI PDF Scanner - Document Scanner | `com.pdfreadermobileapp` | [/apps/ai-pdf-scanner/privacy/](https://sharkscale.online/apps/ai-pdf-scanner/privacy/) | [/apps/ai-pdf-scanner/terms/](https://sharkscale.online/apps/ai-pdf-scanner/terms/) |
+| AI PDF Scanner - Document Scanner | `com.pdfreadermobileapp` | [/privacy/](https://sharkscale.online/privacy/) | [/apps/ai-pdf-scanner/terms/](https://sharkscale.online/apps/ai-pdf-scanner/terms/) |
 
 ## Adding an app
 
-1. Copy `apps/ai-pdf-scanner/` to `apps/<new-slug>/`
-2. Rewrite both pages for what that app actually does — do not leave another
-   app's wording in place, it is a statement about data handling
-3. Add a card to `index.html` and a row to the table above
-4. Push. Pages redeploys on its own
+1. Copy `apps/ai-pdf-scanner/terms/` to `apps/<new-slug>/terms/`
+2. Rewrite it for that app's own plans — do not leave another app's wording in
+   place, it is a statement about what a user is paying for
+3. Check the shared `/privacy/` still describes what the new app does. If it
+   handles data the policy does not mention, the policy needs a section, not
+   the app a different URL
+4. Add a card to `index.html` and a row to the table above
+5. Push. Pages redeploys on its own
 
 ## Updating a policy
 
