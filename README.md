@@ -1,7 +1,11 @@
 # sharkscale-site
 
-Static site behind **https://sharkscale.online** — the landing page plus the
-privacy policy and terms of service for every app we publish.
+Static site behind **https://legal.sharkscale.online** — the landing page plus
+the privacy policy and terms of service for every app we publish.
+
+On a `legal.` subdomain, not the apex: `sharkscale.online` itself already
+redirects to the Upwork Leads Portal, and a domain can only point at one
+place. Play only needs the URL to be public and stable, which a subdomain is.
 
 Hosted on GitHub Pages from `main`. No build step: plain HTML and one
 stylesheet, so a policy correction is an edit and a push.
@@ -25,7 +29,7 @@ per app.
 
 | App | Package | Privacy | Terms |
 | --- | --- | --- | --- |
-| AI PDF Scanner - Document Scanner | `com.pdfreadermobileapp` | [/privacy/](https://sharkscale.online/privacy/) | [/apps/ai-pdf-scanner/terms/](https://sharkscale.online/apps/ai-pdf-scanner/terms/) |
+| AI PDF Scanner - Document Scanner | `com.pdfreadermobileapp` | [/privacy/](https://legal.sharkscale.online/privacy/) | [/apps/ai-pdf-scanner/terms/](https://legal.sharkscale.online/apps/ai-pdf-scanner/terms/) |
 
 ## Adding an app
 
