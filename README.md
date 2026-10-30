@@ -30,6 +30,7 @@ per app.
 | App | Package | Privacy | Terms |
 | --- | --- | --- | --- |
 | AI PDF Scanner - Document Scanner | `com.pdfreadermobileapp` | [/privacy/](https://legal.sharkscale.online/privacy/) | [/apps/ai-pdf-scanner/terms/](https://legal.sharkscale.online/apps/ai-pdf-scanner/terms/) |
+| Language Translator: Documents | `com.sharkstack.aitranslator` | [/privacy/](https://legal.sharkscale.online/privacy/) | [/apps/ai-translator/terms/](https://legal.sharkscale.online/apps/ai-translator/terms/) |
 
 ## Adding an app
 
