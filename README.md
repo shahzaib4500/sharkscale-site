@@ -31,6 +31,8 @@ per app.
 | --- | --- | --- | --- |
 | AI PDF Scanner - Document Scanner | `com.pdfreadermobileapp` | [/privacy/](https://legal.sharkscale.online/privacy/) | [/apps/ai-pdf-scanner/terms/](https://legal.sharkscale.online/apps/ai-pdf-scanner/terms/) |
 | Language Translator: Documents | `com.sharkstack.aitranslator` | [/privacy/](https://legal.sharkscale.online/privacy/) | [/apps/ai-translator/terms/](https://legal.sharkscale.online/apps/ai-translator/terms/) |
+| Recover Photos: File Recovery | `com.photorecoverymobileapp` | [/privacy/](https://legal.sharkscale.online/privacy/) | [/apps/photo-recovery/terms/](https://legal.sharkscale.online/apps/photo-recovery/terms/) |
+| QR Scanner & Barcode Scanner | `com.qrmobileapp` | [/privacy/](https://legal.sharkscale.online/privacy/) | [/apps/qr-scanner/terms/](https://legal.sharkscale.online/apps/qr-scanner/terms/) |
 
 ## Adding an app
 
